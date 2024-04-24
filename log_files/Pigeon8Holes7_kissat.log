@@ -1,0 +1,117 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2022 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 3.0.0 97917ddf2b12adc6f63c7b2a5a403a1ee7d81836
+c gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0 -W -Wall -O3 -DNDEBUG
+c Fri Oct 7 14:23:58 PDT 2022 Linux jap-Lenovo-Yoga-C740-15IML 5.15.0-48-generic x86_64
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c
+c   Pigeon8Holes7
+c
+c parsed 'p cnf 56 204' header
+c closing input after reading 2085 bytes (2 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c  seconds switched rate      trail  variables
+c         MB reductions conflicts glue   remaining
+c          level restarts redundant irredundant
+c
+c *  0.00  1 0 0 0  0 0   0   0 0% 0 204 56 98%
+c {  0.00  1 0 0 0  0 0   0   0 0% 0 204 56 98%
+c u  0.01  3 7 0 0 39 2 544  86 95% 5 204 56 98%
+c v  0.01  3 7 0 0 39 2 544  71 95% 5 204 56 98%
+c -  0.01  3 7 0 1 84 2 1000 468 95% 5 204 56 98%
+c }  0.01  3 7 1 1 84 2 1000 468 95% 5 204 56 98%
+c [  0.01  3 0 1 1 84 0 1000 468 0% 0 204 56 98%
+c B  0.01  3 12 1 1 84 5 1001 469 100% 5 204 56 98%
+c u  0.01  3 5 1 1 84 1 1087 482 94% 4 204 56 98%
+c v  0.01  3 5 1 1 84 1 1087 471 94% 4 204 56 98%
+c i  0.02  3 5 1 1 84 1 1152 535 94% 4 204 55 96%
+c ]  0.02  3 12 2 1 84 1 1756 1124 94% 7 204 55 96%
+c {  0.02  3 7 2 1 84 2 1756 1124 95% 5 204 55 96%
+c -  0.02  3 8 2 2 140 2 2000 466 95% 5 197 55 96%
+c u  0.03  3 7 2 2 159 2 2216 354 95% 5 197 55 96%
+c v  0.03  3 7 2 2 159 2 2216 349 95% 5 197 55 96%
+c }  0.03  3 8 3 2 183 2 2348 480 94% 5 197 55 96%
+c [  0.03  3 12 3 2 183 1 2348 480 94% 7 197 55 96%
+c W  0.03  3 12 3 2 183 1 2348 480 94% 7 197 55 96%
+c e  0.03  3 11 3 2 183 1 2718 850 93% 7 189 47 82%
+c
+c  seconds  switched  rate        trail  variables
+c         MB reductions conflicts    glue    remaining
+c          level restarts   redundant irredundant
+c
+c ^  0.03  3 11 3 2 183 1 2718 850 93% 7 189 47 82%
+c i  0.03  3 11 3 2 183 1 2725 594 93% 7 189 46 81%
+c -  0.04  3 12 3 3 183 1 3417 469 93% 8 182 46 81%
+c u  0.04  3 13 3 3 184 1 3949 914 93% 8 182 46 81%
+c v  0.04  3 13 3 3 184 1 3949 898 93% 8 182 46 81%
+c ]  0.04  3 13 4 3 184 1 3954 903 93% 8 182 46 81%
+c {  0.04  3 8 4 3 184 2 3954 903 94% 5 182 46 81%
+c i  0.05  3 8 4 3 314 2 4440 1348 92% 6 182 45 79%
+c }  0.05  3 8 5 3 314 2 4604 1508 92% 6 182 45 79%
+c [  0.05  3 13 5 3 314 1 4604 1508 93% 8 182 45 79%
+c I  0.05  3 13 5 3 314 1 4609 1513 93% 8 182 45 79%
+c -  0.06  3 12 5 4 314 1 5150 1023 91% 8 176 45 79%
+c ^  0.06  3 12 5 4 314 1 5362 1225 91% 8 176 45 79%
+c i  0.06  3 12 5 4 314 1 5377 1238 91% 8 176 39 68%
+c i  0.06  3 12 5 4 314 1 5527 1346 90% 8 176 30 53%
+c i  0.06  3 12 5 4 314 1 5558 1365 90% 8 176 11 19%
+c ]  0.06  3 12 5 4 314 1 5560 1365 90% 8 176  7 12%
+c 0  0.06  3 8 5 4 314 2 5560 1365 92% 6 176  7 12%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.06   88.78 %  search
+c           0.03   48.43 %  stable
+c           0.03   40.19 %  focused
+c           0.01   10.82 %  simplify
+c           0.01    8.82 %  probe
+c           0.00    5.98 %  vivify
+c           0.00    1.92 %  reduce
+c           0.00    1.80 %  eliminate
+c           0.00    1.53 %  substitute
+c           0.00    1.00 %  sweep
+c           0.00    0.28 %  backbone
+c           0.00    0.20 %  parse
+c           0.00    0.20 %  walking
+c           0.00    0.08 %  subsume
+c           0.00    0.04 %  warmup
+c =============================================
+c           0.06  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                             5560            84492.06 per second
+c decisions:                             9170                1.65 per conflict
+c eliminated:                               8               14 %  variables
+c propagations:                         81661          1240954    per second
+c reductions:                               4             1390    interval
+c rephased:                                 3             1853    interval
+c restarts:                               314               17.71 interval
+c strengthened:                            51               50 %  checks
+c subsumed:                                 4                4 %  checks
+c vivified:                               959               96 %  checks
+c walks:                                    1             5560    interval
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:          3026944 bytes          3 MB
+c process-time:                                              0.06 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
